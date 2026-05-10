@@ -1,9 +1,10 @@
 "use client"
 import { FiGithub, FiLinkedin, FiTwitter, FiInstagram } from "react-icons/fi"
 import MagneticButton from "./MagneticButton"
+import Link from "next/link"
 
 const LINKS   = [{label:"Home",href:"#home"},{label:"About",href:"#about"},{label:"Projects",href:"#projects"},{label:"Contact",href:"#contact"}]
-const SOCIALS = [{Icon:FiGithub,href:"#",label:"GitHub"},{Icon:FiLinkedin,href:"#",label:"LinkedIn"},{Icon:FiTwitter,href:"#",label:"Twitter"},{Icon:FiInstagram,href:"#",label:"Instagram"}]
+const SOCIALS = [{Icon:FiGithub,href:"https://github.com/taniashahida-dev",label:"GitHub"},{Icon:FiLinkedin,href:"https://www.linkedin.com/in/tania9",label:"LinkedIn"},{Icon:FiTwitter,href:"#",label:"Twitter"},{Icon:FiInstagram,href:"#",label:"Instagram"}]
 
 export default function FooterSection() {
   return (
@@ -24,10 +25,10 @@ export default function FooterSection() {
           <div className="flex items-center gap-2.5">
             {SOCIALS.map(({Icon,href,label})=>(
               <MagneticButton key={label}>
-                <a href={href} aria-label={label}
+                <Link href={href}  target="_blank" aria-label={label}
                   className="w-9 h-9 flex items-center justify-center rounded-lg text-p3 hover:text-p4 border border-p4/15 hover:border-p4/35 transition-all duration-300 no-underline">
                   <Icon size={14}/>
-                </a>
+                </Link>
               </MagneticButton>
             ))}
           </div>

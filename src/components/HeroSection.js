@@ -38,7 +38,7 @@ export default function HeroSection() {
         className="fixed left-40 top-1/2 -translate-y-1/2 z-50 hidden lg:flex flex-col items-center gap-4">
         {SOCIALS.map(({Icon,href,label})=>(
           <MagneticButton key={label}>
-            <Link href={href} aria-label={label}
+            <Link href={href} target="_blank" aria-label={label}   
               className="w-9 h-9 flex items-center justify-center rounded-lg text-p3 hover:text-p4 border border-p4/15 hover:border-p4/40 transition-all duration-300 no-underline">
               <Icon size={15}/>
             </Link>
