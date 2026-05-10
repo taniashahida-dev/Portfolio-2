@@ -8,7 +8,8 @@ import TestimonialsSection from "@/components/TestimonialsSection"
 import FAQSection        from "@/components/FAQSection"
 import ContactSection    from "@/components/ContactSection"
 import FooterSection     from "@/components/FooterSection"
-import SkillsSection from "@/components/SkillsSection"
+import SkillsSection from "@/components/Skillssection"
+
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <AboutSection />
-      <SkillsSection />
+     <SkillsSection></SkillsSection>
       <ProjectsSection />
       <TestimonialsSection />
       <FAQSection />
