@@ -4,7 +4,7 @@ import { motion, useInView, AnimatePresence } from "framer-motion"
 import { HiPlus, HiMinus } from "react-icons/hi"
 
 const FAQS = [
-  { q:"What technologies do you use?",          a:"I primarily work with Next.js, React, TypeScript, Node.js, Tailwind CSS, MongoDB, and PostgreSQL. I also integrate third-party APIs and use tools like Git, Vercel, and Figma." },
+  { q:"What technologies do you use?",          a:"I primarily work with Next.js, React,Express.js, Node.js, Tailwind CSS, MongoDB, and Firebase. I also integrate third-party APIs and use tools like Git, Vercel, and Figma." },
   { q:"How long does it take to complete a project?", a:"It depends on project complexity. Small projects take 3–7 days, medium projects 1–3 weeks, and large applications may take 1–3 months. I always deliver on time." },
   { q:"What is your development process like?",  a:"My process: Discovery → Planning → Design → Development → Testing → Launch → Support. I keep you updated at every stage with clear communication." },
   { q:"Do you work with clients remotely?",      a:"Yes! I work with clients worldwide. I use Slack, Zoom, and Notion to ensure smooth communication and transparency throughout the project." },

@@ -63,7 +63,7 @@ export default function AboutSection() {
           {/* Text col */}
           <motion.div {...v(.3)}>
             <p className="text-p3/85 text-sm leading-[1.9] mb-4">
-              Hello, I'm Tania, a dedicated Full Stack Web Developer with 6+ years of experience building
+              Hello, I'm Tania, a dedicated Full Stack Web Developer with 1+ years of experience building
               scalable, high-performance web applications. I specialize in Next.js, React, Node.js, Express.js and Firebase.
             </p>
             <p className="text-p3/85 text-sm leading-[1.9] mb-4">

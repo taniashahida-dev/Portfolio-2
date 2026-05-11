@@ -8,7 +8,7 @@ import TestimonialsSection from "@/components/TestimonialsSection"
 import FAQSection        from "@/components/FAQSection"
 import ContactSection    from "@/components/ContactSection"
 import FooterSection     from "@/components/FooterSection"
-import SkillsSection from "@/components/Skillssection"
+import SkillsSection from "@/components/SkillsSection"
 
 
 export default function Home() {
