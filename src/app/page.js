@@ -11,13 +11,14 @@ import FooterSection     from "@/components/FooterSection"
 import SkillsSection from "@/components/SkillsSection"
 
 
+
 export default function Home() {
   return (
     <main>
       <Navbar />
       <HeroSection />
       <AboutSection />
-     <SkillsSection></SkillsSection>
+    <SkillsSection/>
       <ProjectsSection />
       <TestimonialsSection />
       <FAQSection />
