@@ -2,13 +2,13 @@
 import Navbar            from "@/components/Navbar"
 import HeroSection       from "@/components/HeroSection"
 import AboutSection      from "@/components/AboutSection"
-
+import SkillsSection from "@/components/SkillsSection"
 import ProjectsSection   from "@/components/ProjectsSection"
 import TestimonialsSection from "@/components/TestimonialsSection"
 import FAQSection        from "@/components/FAQSection"
 import ContactSection    from "@/components/ContactSection"
 import FooterSection     from "@/components/FooterSection"
-import SkillsSection from "@/components/SkillsSection"
+
 
 
 
