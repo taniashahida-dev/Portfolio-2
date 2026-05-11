@@ -55,7 +55,7 @@ const SKILL_BOXES = [
   { label:"Node",   color:"#339933", abbr:"ND" },
 ]
 
-export default function SkillsSection() {
+export default function Skillssection() {
   const ref = useRef(null)
   const inView = useInView(ref, { once:true, margin:"-80px" })
 
