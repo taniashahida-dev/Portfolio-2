@@ -55,8 +55,8 @@ export default function AboutSection() {
             {/* floating badge */}
             <motion.div animate={{y:[0,-10,0]}} transition={{repeat:Infinity,duration:3,ease:"easeInOut"}}
               className="absolute -top-4 -right-4 bg-p1/90 border border-p4/20 rounded-xl px-4 py-3 backdrop-blur-lg text-center">
-              <p className="font-display text-p4 text-2xl leading-none">1+</p>
-              <p className="font-mono text-p3 text-[.58rem] tracking-[.15em] uppercase">YEARS LEARNING.</p>
+              <p className="font-display text-p4 text-2xl leading-none">CSE</p>
+              <p className="font-mono text-p3 text-[.58rem] tracking-[.15em] uppercase">STUDENT</p>
             </motion.div>
           </motion.div>
 
@@ -76,8 +76,8 @@ export default function AboutSection() {
             </p>
             {/* Tech tags */}
             <div className="flex flex-wrap gap-2">
-              {["Next.js","React","Node.js","Express.js","Tailwind CSS","MongoDB","Firebase","REST API"].map(t=>(
-                <span key={t} className="px-3 py-1.5 rounded-full font-mono text-[.62rem] tracking-wider text-p4 border border-p4/20 bg-p4/5">
+              {["Next.js","React","Node.js","Express.js","Tailwind CSS","MongoDB","Better-Auth","REST API"].map(t=>(
+                <span key={t} className="px-3 py-1 rounded-full font-mono text-[.62rem] tracking-wider text-p4 border  bg-p4/6 transition-all duration-300 hover:scale-105 -translate-y-0.5 border-p4/60 bg-p4/10 hover:shadow-[0_8px_25px_rgba(214,189,152,0.15)]">
                   {t}
                 </span>
               ))}
@@ -89,8 +89,8 @@ export default function AboutSection() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           {STATS.map(({Icon,value,label,sub},i)=>(
             <motion.div key={label} {...v(.4+i*.08)}
-              className="text-center p-6 rounded-2xl border border-p4/10 bg-p1/20 hover:border-p4/25 transition-all duration-300 group">
-              <Icon className="text-p4 mx-auto mb-3 text-xl opacity-70 group-hover:opacity-100 transition-opacity"/>
+              className="text-center p-6 rounded-2xl border border-p4/20 bg-p1/20 transition-all duration-500 group hover:-translate-y-3 hover:scale-[1.03] hover:border-p4/60 hover:shadow-[0_20px_50px_rgba(214,189,152,0.12)]">
+              <Icon className="text-p4 mx-auto mb-3 text-xl opacity-70 transition-all duration-300 group-hover:opacity-100 group-hover:scale-125 group-hover:-translate-y-1"/>
               <p className="font-display text-4xl text-p4 mb-1">{value}</p>
               <p className="font-mono text-[.62rem] tracking-[.15em] uppercase text-p3 mb-2">{label}</p>
               <p className="text-p3/60 text-[.72rem] leading-relaxed">{sub}</p>

@@ -1,6 +1,19 @@
 "use client"
 import { useRef } from "react"
 import { motion, useInView } from "framer-motion"
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaReact,
+  FaNodeJs
+} from "react-icons/fa"
+import { FiShield } from "react-icons/fi"
+import {
+  SiNextdotjs,
+  SiTailwindcss,
+  SiJavascript,SiExpress, SiFirebase
+} from "react-icons/si"
 
 const SKILLS_1 = [
   { label:"HTML5",       color:"#e34f26" },
@@ -45,15 +58,16 @@ function MarqueeRow({ items, reverse }) {
 
 // Grid of skill boxes (same as reference design top section)
 const SKILL_BOXES = [
-  { label:"HTML5",  color:"#e34f26", abbr:"H5" },
-  { label:"CSS3",   color:"#1572b6", abbr:"C3" },
-  { label:"JS",     color:"#f7df1e", abbr:"JS" },
-  { label:"ES",     color:"#3178c6", abbr:"ES" },
-  { label:"Next",   color:"#D6BD98", abbr:"NX" },
-  { label:"React",  color:"#61dafb", abbr:"RJ" },
-  { label:"TW",     color:"#38bdf8", abbr:"TW" },
-  { label:"Node",   color:"#339933", abbr:"ND" },
-]
+  { label:"HTML5", color:"#e34f26", icon: FaHtml5 },
+  { label:"CSS3", color:"#1572b6", icon: FaCss3Alt },
+  { label:"JavaScript", color:"#f7df1e", icon: FaJs },
+  { label:"ES6", color:"#3178c6", icon: SiJavascript },
+  { label:"Next.js", color:"#D6BD98", icon: SiNextdotjs },
+  { label:"React", color:"#61dafb", icon: FaReact },
+  { label:"Tailwind", color:"#38bdf8", icon: SiTailwindcss },
+  { label:"Node.js", color:"#339933", icon: FaNodeJs },
+   { label:"Express.js", color:"#ffffff", icon: SiExpress },
+  { label:"Better Auth", color:"#D6BD98", icon: FiShield },]
 
 export default function Skillssection() {
   const ref = useRef(null)
@@ -76,16 +90,22 @@ export default function Skillssection() {
         </motion.h2>
 
         {/* Icon grid — same as reference */}
-        <div className="grid grid-cols-4 md:grid-cols-8 gap-3 mb-16">
-          {SKILL_BOXES.map(({label,color,abbr},i)=>(
+        <div className="grid grid-cols-4 md:grid-cols-8 gap-3 mb-16 justify-center">
+          {SKILL_BOXES.map(({label,color,icon:Icon},i)=>(
             <motion.div key={label}
               initial={{opacity:0,scale:.8}} animate={inView?{opacity:1,scale:1}:{}}
               transition={{duration:.4,delay:.1+i*.05}}
-              className="flex flex-col items-center gap-2 py-5 px-2 rounded-xl border border-p4/10 bg-p1/30 hover:border-p4/35 hover:bg-p1/60 hover:-translate-y-1 transition-all duration-300 group">
-              <div className="w-9 h-9 rounded-lg flex items-center justify-center font-display text-base tracking-wider"
-                style={{background:`${color}18`,color,border:`1px solid ${color}30`}}>
-                {abbr}
-              </div>
+           className="flex flex-col items-center gap-2 py-5 px-2 rounded-xl border border-p4/10 bg-p1/30 hover:border-p4/35 hover:bg-p1/60 hover:-translate-y-1 transition-all duration-300 group">
+             <div
+  className="w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-500 group-hover:rotate-[360deg] group-hover:scale-110"
+  style={{
+    background: `${color}18`,
+    color,
+    border: `1px solid ${color}40`
+  }}
+>
+  <Icon size={24} />
+</div>
               <span className="font-mono text-[.6rem] tracking-wider text-p3 group-hover:text-p4 transition-colors text-center">{label}</span>
             </motion.div>
           ))}

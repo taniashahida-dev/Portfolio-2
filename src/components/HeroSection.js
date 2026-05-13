@@ -79,9 +79,9 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="font-mono text-[.65rem] tracking-[.3em] uppercase text-p4 mb-4"
+              className="font-mono text-[.65rem] tracking-[.3em] uppercase text-p4  mb-4"
             >
-              Hi, My Name is
+              Hi, I'AM
             </motion.p>
 
             <div className="overflow-hidden mb-2">
@@ -300,11 +300,11 @@ export default function HeroSection() {
               className="absolute -bottom-1 -left-2 bg-p1/90 border border-p4/20 rounded-xl px-4 py-3 backdrop-blur-lg text-center"
             >
               <p className="font-display text-p4 text-3xl leading-none my-2">
-                CSE
+                1+
               </p>
               <p className="font-mono text-p3 text-[.58rem] tracking-[.18em] uppercase">
                 {" "}
-                STUDENT
+               YEARS LEARNING
               </p>
             </motion.div>
           </motion.div>
