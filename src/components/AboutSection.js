@@ -2,6 +2,7 @@
 import { useRef } from "react"
 import { motion, useInView } from "framer-motion"
 import { HiOutlineFolder, HiOutlineClock, HiOutlineUsers, HiOutlineSupport } from "react-icons/hi"
+import Image from "next/image"
 
 const STATS = [
   { Icon:HiOutlineFolder, value:"15+", label:"PRACTICE PROJECTS",     sub:"Building responsive and modern web applications." },
@@ -36,22 +37,35 @@ export default function AboutSection() {
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
           {/* Photo col */}
           <motion.div {...v(.2)} className="relative">
-            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden border border-p4/15"
-              style={{background:"linear-gradient(135deg,rgba(64,83,76,.4),rgba(26,54,54,.9))"}}>
-              {/* Replace this div with <Image src="your-photo.jpg" fill alt="Asad" className="object-cover"/> */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <svg viewBox="0 0 200 340" className="w-3/4 h-3/4 opacity-40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <ellipse cx="100" cy="72" rx="34" ry="38" fill="#677D6A"/>
-                  <rect x="91" y="108" width="18" height="22" rx="6" fill="#677D6A"/>
-                  <path d="M38 148 Q50 128 100 126 Q150 128 162 148 L168 300 L32 300 Z" fill="#40534C"/>
-                </svg>
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-darker to-transparent"/>
-              <div className="absolute bottom-6 left-6">
-                <p className="font-display text-3xl text-p4 tracking-wider">TANIA</p>
-                <p className="font-mono text-[.6rem] tracking-[.25em] uppercase text-p3">Full Stack Web Developer</p>
-              </div>
-            </div>
+           
+
+            <div
+  className="relative aspect-[3/4] rounded-2xl overflow-hidden border border-p4/15"
+  style={{background:"linear-gradient(135deg,rgba(64,83,76,.4),rgba(26,54,54,.9))"}}
+>
+  <Image
+    src="/aboute.png"
+    fill
+  alt="Tania"
+  quality={100}
+  priority
+  className="object-contain scale-105 drop-shadow-[0_25px_40px_rgba(0,0,0,0.45)]"
+  />
+
+  {/* overlay */}
+  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+
+  {/* bottom fade */}
+  <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-darker to-transparent"/>
+
+  {/* text */}
+  <div className="absolute bottom-6 left-6">
+    <p className="font-display text-3xl text-p4 tracking-wider">TANIA</p>
+    <p className="font-mono text-[.6rem] tracking-[.25em] uppercase text-p3">
+      Full Stack Web Developer
+    </p>
+  </div>
+</div>
             {/* floating badge */}
             <motion.div animate={{y:[0,-10,0]}} transition={{repeat:Infinity,duration:3,ease:"easeInOut"}}
               className="absolute -top-4 -right-4 bg-p1/90 border border-p4/20 rounded-xl px-4 py-3 backdrop-blur-lg text-center">
