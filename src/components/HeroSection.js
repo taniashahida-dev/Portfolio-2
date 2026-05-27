@@ -6,6 +6,7 @@ import { HiArrowRight, HiArrowDown } from "react-icons/hi";
 import MagneticButton from "./MagneticButton";
 import Link from "next/link";
 import Image from "next/image";
+import { FaTelegramPlane, FaWhatsapp } from "react-icons/fa";
 
 const SOCIALS = [
   {
@@ -18,8 +19,8 @@ const SOCIALS = [
     href: "https://www.linkedin.com/in/tania9",
     label: "LinkedIn",
   },
-  { Icon: FiFacebook , href: "https://www.facebook.com/tania.shahida.2024", label: "Facebook" },
-  { Icon: FiInstagram, href: "#", label: "Instagram" },
+  { Icon: FaTelegramPlane , href: "https://www.facebook.com/tania.shahida.2024", label: "Telegram" },
+  { Icon: FaWhatsapp, href: "#", label: "Whatsapp" },
 ];
 
 export default function HeroSection() {
@@ -188,7 +189,6 @@ export default function HeroSection() {
               }}
             />
 
-            {/* Photo frame — oval shape like reference */}
             <div
               className="relative w-72 h-96 lg:w-80 lg:h-[440px] rounded-[50%_50%_50%_50%/60%_60%_40%_40%] overflow-hidden border border-p4/20"
               style={{
@@ -196,54 +196,15 @@ export default function HeroSection() {
                   "linear-gradient(180deg,rgba(64,83,76,.5) 0%,rgba(26,54,54,.8) 50%,rgba(9,21,21,1) 100%)",
               }}
             >
-              {/* Silhouette placeholder — replace with your <Image> */}
+              
               <div className="absolute inset-0 flex items-end justify-center pb-0 overflow-hidden">
-                {/* Human figure silhouette SVG */}
-                {/* <svg
-                  viewBox="0 0 200 340"
-                  className="w-full h-full opacity-60"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                 
-                  <ellipse
-                    cx="100"
-                    cy="72"
-                    rx="34"
-                    ry="38"
-                    fill="#677D6A"
-                    opacity=".7"
-                  />
-                 
-                  <rect
-                    x="91"
-                    y="108"
-                    width="18"
-                    height="22"
-                    rx="6"
-                    fill="#677D6A"
-                    opacity=".65"
-                  />
-                 
-                  <path
-                    d="M38 148 Q50 128 100 126 Q150 128 162 148 L168 260 L32 260 Z"
-                    fill="#40534C"
-                    opacity=".6"
-                  />
-                 
-                  <path
-                    d="M70 140 Q100 155 130 140"
-                    stroke="#D6BD98"
-                    strokeWidth="1"
-                    opacity=".2"
-                    fill="none"
-                  />
-                </svg> */}
+               
 
                  <Image
     src="/heroProfile.png"
     alt="Tania"
     fill
+    quality={100}
     className="object-cover
       object-top
       scale-105
@@ -278,13 +239,13 @@ export default function HeroSection() {
             <motion.div
               animate={{ y: [0, -10, 0] }}
               transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
-              className="absolute -top-3 -right-12 bg-p1/90 border border-p4/20 rounded-xl px-4 py-3 backdrop-blur-lg text-center"
+              className="absolute -top-3 -right-14 bg-p1/90 border border-p4/20 rounded-xl px-4 py-3 backdrop-blur-lg text-center"
             >
               <p className="font-display text-p4 text-3xl leading-none my-2">
                 10+
               </p>
               <p className="font-mono text-p3 text-[.58rem] tracking-[.18em] uppercase">
-                Practice Projects.
+                Completed Projects.
               </p>
             </motion.div>
 
@@ -297,7 +258,7 @@ export default function HeroSection() {
                 ease: "easeInOut",
                 delay: 0.5,
               }}
-              className="absolute -bottom-1 -left-2 bg-p1/90 border border-p4/20 rounded-xl px-4 py-3 backdrop-blur-lg text-center"
+              className="absolute -bottom-1 -left-9 bg-p1/90 border border-p4/20 rounded-xl px-4 py-3 backdrop-blur-lg text-center"
             >
               <p className="font-display text-p4 text-3xl leading-none my-2">
                 1+
